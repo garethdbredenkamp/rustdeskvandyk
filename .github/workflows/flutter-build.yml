@@ -60,7 +60,7 @@ jobs:
   build-for-windows-flutter:
     name: ${{ matrix.job.target }}
     needs: [build-RustDeskTempTopMostWindow]
-    runs-on: self-hosted
+    runs-on: ${{ matrix.job.os }}
     strategy:
       fail-fast: false
       matrix:
